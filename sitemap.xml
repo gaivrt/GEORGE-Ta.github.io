@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/baidu_verify_code-bc4Ap0GvsO.html</loc>
-    
-    <lastmod>2022-06-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/index.html</loc>
     
     <lastmod>2022-06-12</lastmod>
@@ -65,14 +56,14 @@
 
   
   <url>
-    <loc>http://example.com/tags/Thoughts/</loc>
+    <loc>http://example.com/tags/Diary/</loc>
     <lastmod>2022-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Diary/</loc>
+    <loc>http://example.com/tags/Thoughts/</loc>
     <lastmod>2022-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -81,14 +72,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/Thoughts/</loc>
+    <loc>http://example.com/categories/Diary/</loc>
     <lastmod>2022-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Diary/</loc>
+    <loc>http://example.com/categories/Thoughts/</loc>
     <lastmod>2022-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
