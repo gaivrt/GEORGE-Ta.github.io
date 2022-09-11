@@ -1,10 +1,10 @@
 #waifu-toggle {
-	background-color: #fa0;
+	background-color: rgba(175, 208, 255, 0.68);
 	border-radius: 5px;
-	bottom: 66px;
+	bottom: 6px;
 	color: #fff;
 	cursor: pointer;
-	font-size: 12px;
+	font-size: 7px;
 	left: 0;
 	margin-left: -100px;
 	padding: 5px 2px 5px 5px;
@@ -25,10 +25,10 @@
 #waifu {
 	bottom: -1000px;
 	left: 0;
-	line-height: 0;
+	line-height: 2;
 	margin-bottom: -10px;
 	position: fixed;
-	transform: translateY(3px);
+	transform: translateY(5px);
 	transition: transform .3s ease-in-out, bottom 3s ease-in-out;
 	z-index: 1;
 }
@@ -39,10 +39,10 @@
 
 #waifu-tips {
 	animation: shake 50s ease-in-out 5s infinite;
-	background-color: rgba(236, 217, 188, .5);
-	border: 1px solid rgba(224, 186, 140, .62);
+	background-color: rgba(222, 222, 222, .8);
+	border: 1px solid rgba(188, 188, 188, .62);
 	border-radius: 12px;
-	box-shadow: 0 3px 15px 2px rgba(191, 158, 118, .2);
+	box-shadow: 0 3px 15px 2px rgba(0, 0, 0, .2);
 	font-size: 14px;
 	line-height: 24px;
 	margin: -30px 20px;
@@ -68,9 +68,9 @@
 
 #live2d {
 	cursor: grab;
-	height: 300px;
+	height: 400px;
 	position: relative;
-	width: 300px;
+	width: px;
 }
 
 #live2d:active {
