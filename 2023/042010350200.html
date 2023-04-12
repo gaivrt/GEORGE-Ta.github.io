@@ -31,15 +31,16 @@
 <meta property="og:site_name" content="GAIVRT">
 <meta property="og:description" content="总结一下如何把node-chatgpt-api和PandoraAI部署到Windows阿里云服务器上。 node-chatgpt-api就相当于是一个核心，控制AI回复你什么，PandoraAI就是一个网页UI程序。  本地部署node-chatgpt-api首先，打开github这个项目主页，我写的这个东西你需要打开这个主页一起看才能看懂。node-chatgpt-api看不懂可以不看，我也没看">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156655.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156165.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156713.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201382.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201854.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201681.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130200907.png">
 <meta property="article:published_time" content="2023-04-12T17:56:01.000Z">
-<meta property="article:modified_time" content="2023-04-12T17:56:13.863Z">
+<meta property="article:modified_time" content="2023-04-12T18:02:11.633Z">
 <meta property="article:author" content="GAIVR">
 <meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156655.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201382.png">
 
 <link rel="canonical" href="http://example.com/2023/042010350200.html">
 
@@ -216,7 +217,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-04-13 01:56:01 / 修改时间：01:56:13" itemprop="dateCreated datePublished" datetime="2023-04-13T01:56:01+08:00">2023-04-13</time>
+              <time title="创建时间：2023-04-13 01:56:01 / 修改时间：02:02:11" itemprop="dateCreated datePublished" datetime="2023-04-13T01:56:01+08:00">2023-04-13</time>
             </span>
 
           
@@ -239,7 +240,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
+              <span>3.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -279,14 +280,14 @@
 <li><p>打开newbing</p>
 </li>
 <li><p>右键点这个检查</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156655.png" alt="image-20230413012934909"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201382.png" alt="image-20230413012934909"></p>
 </li>
 <li></li>
 </ol>
-<p>vpn port以clash for windows 为例，在这<br><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156165.png" alt="image-20230413012844207"></p>
+<p>vpn port以clash for windows 为例，在这<br><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201854.png" alt="image-20230413012844207"></p>
 <ol start="4">
 <li><p>如图找到_U，把右边的值复制，就是你的userToken</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156713.png" alt="image-20230413013246841"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201681.png" alt="image-20230413013246841"></p>
 </li>
 </ol>
 <p>就设置好了，再最后</p>
@@ -311,11 +312,10 @@
 
 
 
-
-
 <h3 id="env"><a href="#env" class="headerlink" title=".env"></a>.env</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">API_BASE_URL=http://你的公网ip:3001</span><br></pre></td></tr></table></figure>
 
 <p>改成这个</p>
+<p>(期间一个技巧来查看是否成功开辟端口就是netstat -oan 来看是否成功开辟。)</p>
 <h3 id="nuxt-config-js"><a href="#nuxt-config-js" class="headerlink" title="nuxt.config.js"></a>nuxt.config.js</h3><p>最后加个</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="attr">server</span>: &#123;</span><br><span class="line">        <span class="attr">host</span>: <span class="string">&#x27;0.0.0.0&#x27;</span>, <span class="comment">// 使用 &#x27;0.0.0.0&#x27; 监听所有网络接口</span></span><br><span class="line">        <span class="attr">port</span>: <span class="number">3000</span>, <span class="comment">// 您可以选择任何可用的端口</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
@@ -334,7 +334,11 @@
 <p>然后推出，在bash命令行</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
 
-<p>没意外就ok了。</p>
+
+
+<h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><p>你要在你的阿里云或者什么云那设置防火墙，加这么一条，把3000&#x2F;3001弄出来。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130200907.png" alt="image-20230413020044889"></p>
+<p>应该就好了。</p>
 
     </div>
 
@@ -416,7 +420,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E5%A6%82%E4%BD%95%E6%8A%8Anode-chatgpt-api%E5%92%8CPandoraAI%E9%83%A8%E7%BD%B2%E5%88%B0Windows%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">总结一下如何把node-chatgpt-api和PandoraAI部署到Windows阿里云服务器上。</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2node-chatgpt-api"><span class="nav-number">1.1.</span> <span class="nav-text">本地部署node-chatgpt-api</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5"><span class="nav-number">1.1.1.</span> <span class="nav-text">第一步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5"><span class="nav-number">1.1.2.</span> <span class="nav-text">第二步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5"><span class="nav-number">1.1.3.</span> <span class="nav-text">第三步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2PandoraAI"><span class="nav-number">1.2.</span> <span class="nav-text">本地部署PandoraAI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">第三步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.3.</span> <span class="nav-text">部署到服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#setting-js"><span class="nav-number">1.3.1.</span> <span class="nav-text">setting.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#env"><span class="nav-number">1.3.2.</span> <span class="nav-text">.env</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nuxt-config-js"><span class="nav-number">1.3.3.</span> <span class="nav-text">nuxt.config.js</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E5%A6%82%E4%BD%95%E6%8A%8Anode-chatgpt-api%E5%92%8CPandoraAI%E9%83%A8%E7%BD%B2%E5%88%B0Windows%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">总结一下如何把node-chatgpt-api和PandoraAI部署到Windows阿里云服务器上。</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2node-chatgpt-api"><span class="nav-number">1.1.</span> <span class="nav-text">本地部署node-chatgpt-api</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5"><span class="nav-number">1.1.1.</span> <span class="nav-text">第一步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5"><span class="nav-number">1.1.2.</span> <span class="nav-text">第二步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5"><span class="nav-number">1.1.3.</span> <span class="nav-text">第三步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2PandoraAI"><span class="nav-number">1.2.</span> <span class="nav-text">本地部署PandoraAI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">第三步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.3.</span> <span class="nav-text">部署到服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#setting-js"><span class="nav-number">1.3.1.</span> <span class="nav-text">setting.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#env"><span class="nav-number">1.3.2.</span> <span class="nav-text">.env</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nuxt-config-js"><span class="nav-number">1.3.3.</span> <span class="nav-text">nuxt.config.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-number">1.4.</span> <span class="nav-text">防火墙</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

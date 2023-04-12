@@ -209,7 +209,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-04-13 01:56:01 / 修改时间：01:56:13" itemprop="dateCreated datePublished" datetime="2023-04-13T01:56:01+08:00">2023-04-13</time>
+              <time title="创建时间：2023-04-13 01:56:01 / 修改时间：02:02:11" itemprop="dateCreated datePublished" datetime="2023-04-13T01:56:01+08:00">2023-04-13</time>
             </span>
 
           
@@ -232,7 +232,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
+              <span>3.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -272,14 +272,14 @@
 <li><p>打开newbing</p>
 </li>
 <li><p>右键点这个检查</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156655.png" alt="image-20230413012934909"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201382.png" alt="image-20230413012934909"></p>
 </li>
 <li></li>
 </ol>
-<p>vpn port以clash for windows 为例，在这<br><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156165.png" alt="image-20230413012844207"></p>
+<p>vpn port以clash for windows 为例，在这<br><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201854.png" alt="image-20230413012844207"></p>
 <ol start="4">
 <li><p>如图找到_U，把右边的值复制，就是你的userToken</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130156713.png" alt="image-20230413013246841"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130201681.png" alt="image-20230413013246841"></p>
 </li>
 </ol>
 <p>就设置好了，再最后</p>
@@ -304,11 +304,10 @@
 
 
 
-
-
 <h3 id="env"><a href="#env" class="headerlink" title=".env"></a>.env</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">API_BASE_URL=http://你的公网ip:3001</span><br></pre></td></tr></table></figure>
 
 <p>改成这个</p>
+<p>(期间一个技巧来查看是否成功开辟端口就是netstat -oan 来看是否成功开辟。)</p>
 <h3 id="nuxt-config-js"><a href="#nuxt-config-js" class="headerlink" title="nuxt.config.js"></a>nuxt.config.js</h3><p>最后加个</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="attr">server</span>: &#123;</span><br><span class="line">        <span class="attr">host</span>: <span class="string">&#x27;0.0.0.0&#x27;</span>, <span class="comment">// 使用 &#x27;0.0.0.0&#x27; 监听所有网络接口</span></span><br><span class="line">        <span class="attr">port</span>: <span class="number">3000</span>, <span class="comment">// 您可以选择任何可用的端口</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
@@ -327,7 +326,11 @@
 <p>然后推出，在bash命令行</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
 
-<p>没意外就ok了。</p>
+
+
+<h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><p>你要在你的阿里云或者什么云那设置防火墙，加这么一条，把3000&#x2F;3001弄出来。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GEORGE-Ta/Typora//img/202304130200907.png" alt="image-20230413020044889"></p>
+<p>应该就好了。</p>
 
       
     </div>
